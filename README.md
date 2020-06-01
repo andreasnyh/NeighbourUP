@@ -31,6 +31,7 @@ To prevent bad code slipping into our codebase, we will run lint staged which wi
 This will run before the commit is being done, so when running `git commit` lint staged will step in and check the files for linting errors before its possible to commit.
 
 It looks something like this:
+![alt tag](https://user-images.githubusercontent.com/53083229/83394453-e5bff180-a3f8-11ea-8b46-bc2149f999d2.png)
 
 ## Create React App
 
