@@ -27,3 +27,4 @@ This will run before the commit is being done, so when running <code>git commit<
 the files for linting errors before its possible to commit.
 
 It looks something like this:
+![alt tag](https://user-images.githubusercontent.com/53083229/83394453-e5bff180-a3f8-11ea-8b46-bc2149f999d2.png)
