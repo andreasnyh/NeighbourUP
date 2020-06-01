@@ -5,6 +5,14 @@ Clone the project with <code> git clone "https://github.com/SimonNord/NeighbourU
 Run <code>npm install </code> in the project folder to get all the needed dependencies.
 
 ## Tools
+
+#### Storybook
+Storybook is a user interface development environment and playground for UI components. The tool enables developers to create components independently and showcase components interactively in an isolated development environment.
+
+To run storybook, run <code> run storybook</code> in terminal and a new browser tab will open with storybook. <br/>
+Here you can see your individual components and tweak them as you like.
+#### Jest
+
 #### ESLint
 The project got Eslint installed which will show linting errors in the editor and enforce us to use Airbnb code standard.
 
