@@ -7,14 +7,28 @@ Run `npm install` in the project folder to get all the needed dependencies.
 
 ## Tools
 
+### Storybook
+
+Storybook is a user interface development environment and playground for UI components.
+The tool enables developers to create components independently and showcase components
+interactively in an isolated development environment.
+
+To run storybook, run `run storybook` in terminal and a new browser tab will open with storybook.
+Here you can see your individual components and tweak them as you like.
+
+### Jest
+
 ### ESLint
 
-The project got Eslint installed which will show linting errors in the editor and enforce us to use Airbnb code standard.
+The project got Eslint installed which will show linting errors in the editor and
+enforce us to use Airbnb code standard.
 
 ### Prettier
 
-Prettier is used for formating. For best experience you should have Prettier extension for VS-Code. This will make VsCode format documents for you in the choosen style.
-It can be found here <https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode> and set the default formatter to Prettier.
+Prettier is used for formating. For best experience you should have Prettier extension for VS-Code.
+This will make VsCode format documents for you in the choosen style.
+It can be found here <https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode>
+and set the default formatter to Prettier.
 
 #### Set the default formatter to Prettier (If there are multiple formatters installed)
 
