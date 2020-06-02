@@ -11,7 +11,6 @@ Storybook is a user interface development environment and playground for UI comp
 
 To run storybook, run <code> run storybook</code> in terminal and a new browser tab will open with storybook. <br/>
 Here you can see your individual components and tweak them as you like.
-#### Jest
 
 #### ESLint
 The project got Eslint installed which will show linting errors in the editor and enforce us to use Airbnb code standard.
@@ -36,3 +35,9 @@ the files for linting errors before its possible to commit.
 
 It looks something like this:
 ![alt tag](https://user-images.githubusercontent.com/53083229/83394453-e5bff180-a3f8-11ea-8b46-bc2149f999d2.png)
+
+## Testing
+
+#### Jest
+
+#### Mocha
