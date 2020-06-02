@@ -20,9 +20,9 @@ async function run() {
     const db = client.db(dbName);
     // Use the collection "users"
     const col = db.collection('users');
-    const myDoc = await col.findOne();
+    const allUsers = await col.find({}).toArray();
     // Print to the console
-    console.log(myDoc);
+    console.log(allUsers);
   } catch (err) {
     console.log(err.stack);
   } finally {
