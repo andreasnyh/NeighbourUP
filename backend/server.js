@@ -20,8 +20,7 @@ mongoose.connect(uri, {
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
-  // we're connected!
-  console.log('connected!');
+  console.log('MongoDB database connection established successfully');
 });
 
 const userSchema = mongoose.Schema({
@@ -39,6 +38,6 @@ const addUser = new User({
 
 addUser.save((err, doc) => {
   if (err) return console.log(err);
-
+  console.log(doc._id.getTimestamp());
   return console.log('User added: \n', doc);
 });
