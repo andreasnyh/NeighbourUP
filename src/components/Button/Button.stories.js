@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from './Button';
+import StyledButton from './Button';
 import Colors from '../../variables';
 
-export default { title: 'Button' };
+export default { title: 'Buttons' };
 
 const StorybookWhiteCentered = {
   display: 'flex',
@@ -13,14 +13,27 @@ const StorybookWhiteCentered = {
   background: Colors.Beige,
 };
 
-export const PrimaryButton = () => {
+const StorybookBlueCentered = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '100%',
+  height: '100%',
+  background: Colors.DarkBlue,
+};
+
+export const DarkModeButton = () => {
   return (
-    <div style={StorybookWhiteCentered}>
-      <Button primary>Logga in</Button>
+    <div style={StorybookBlueCentered}>
+      <StyledButton darkmode>Dark Mode</StyledButton>
     </div>
   );
 };
 
-export const NormalButton = () => {
-  return <Button>Hej brush</Button>;
+export const LightModeButton = () => {
+  return (
+    <div style={StorybookWhiteCentered}>
+      <StyledButton lightMode>Light Mode</StyledButton>
+    </div>
+  );
 };

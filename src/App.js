@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Button from './components/Button/Button';
+import StyledButton from './components/Button/Button';
 
 function App() {
   return (
@@ -9,8 +9,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Sign in</p>
-        <Button>Normal</Button>
-        <Button primary>Primary</Button>
+        <StyledButton>Light Mode</StyledButton>
+        {/* <Button darkMode>Dark Mode</Button> */}
       </header>
     </div>
   );
