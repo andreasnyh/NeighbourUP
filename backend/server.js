@@ -1,6 +1,7 @@
 // const { MongoClient } = require('mongodb');
-const mongoose = require('mongoose');
 require('dotenv').config();
+const mongoose = require('mongoose');
+const User = require('./models/user.model');
 
 const dbUser = process.env.REACT_APP_DBUSER;
 const dbPass = process.env.REACT_APP_DBPASS;
@@ -23,13 +24,6 @@ db.once('open', () => {
   console.log('MongoDB database connection established successfully');
 });
 
-const userSchema = mongoose.Schema({
-  firstName: String,
-  lastName: String,
-  email: String,
-});
-
-const User = mongoose.model('User', userSchema, 'users');
 const addUser = new User({
   firstName: 'Mongoose User',
   lastName: 'With model&schema',
