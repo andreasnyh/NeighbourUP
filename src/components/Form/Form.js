@@ -1,15 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Colors from '../../variables';
 import Title from './Title';
 
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background-color: ${(props) =>
-    props.darkmode ? Colors.DarkBlue : Colors.Beige};
+  border: 1px solid white;
 `;
 
 const Form = ({ children, text }) => {

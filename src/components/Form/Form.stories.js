@@ -29,6 +29,7 @@ export const DarkModeForm = () => {
       <Form darkmode text="Bli Medlem">
         <Input darkmode placeholder="Förnamn" />
         <Input darkmode placeholder="Efternamn" />
+        <Input darkmode placeholder="Epost" />
         <Input darkmode placeholder="Address" />
         <Input darkmode placeholder="C/O" />
         <Input darkmode placeholder="Lösenord" />
@@ -42,12 +43,13 @@ export const LightModeForm = () => {
   return (
     <div style={StorybookWhiteCentered}>
       <Form text="Bli Medlem">
-        <Input placeholder="Förnamn" />
-        <Input placeholder="Efternamn" />
-        <Input placeholder="Address" />
-        <Input placeholder="C/O" />
-        <Input placeholder="Lösenord" />
-        <Input placeholder="Upprepa lösenord" />
+        <Input type="text" placeholder="Förnamn" />
+        <Input type="text" placeholder="Efternamn" />
+        <Input type="text" placeholder="Epost" />
+        <Input type="text" placeholder="Address" />
+        <Input type="text" placeholder="C/O" />
+        <Input type="password" placeholder="Lösenord" />
+        <Input type="password" placeholder="Upprepa lösenord" />
       </Form>
     </div>
   );
