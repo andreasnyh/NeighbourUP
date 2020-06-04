@@ -26,7 +26,7 @@ const StorybookBlueCentered = {
 export const DarkModeForm = () => {
   return (
     <div style={StorybookBlueCentered}>
-      <Form darkmode>
+      <Form darkmode text="Bli Medlem">
         <Input darkmode placeholder="Förnamn" />
         <Input darkmode placeholder="Efternamn" />
         <Input darkmode placeholder="Address" />
@@ -41,7 +41,7 @@ export const DarkModeForm = () => {
 export const LightModeForm = () => {
   return (
     <div style={StorybookWhiteCentered}>
-      <Form>
+      <Form text="Bli Medlem">
         <Input placeholder="Förnamn" />
         <Input placeholder="Efternamn" />
         <Input placeholder="Address" />
