@@ -20,7 +20,7 @@ const StorybookBlueCentered = {
   justifyContent: 'center',
   width: '100vw',
   height: '100vh',
-  background: Colors.DarkBlue,
+  background: Colors.Beige,
 };
 
 export const DarkModeForm = () => {

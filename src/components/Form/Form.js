@@ -8,14 +8,15 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   padding: 10px;
+  border: 1px solid black;
   background-color: ${(props) =>
     props.darkmode ? Colors.DarkBlue : Colors.Beige};
 `;
 
-const Form = ({ children, text }) => {
+const Form = ({ children, text, darkmode }) => {
   return (
     <div>
-      <StyledForm>
+      <StyledForm darkmode={darkmode}>
         <Title text={text} />
         {children}
       </StyledForm>
@@ -26,11 +27,13 @@ const Form = ({ children, text }) => {
 Form.propTypes = {
   children: PropTypes.element,
   text: String,
+  darkmode: true,
 };
 
 Form.defaultProps = {
   children: PropTypes.element,
   text: String,
+  darkmode: false,
 };
 
 export default Form;
