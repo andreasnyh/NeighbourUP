@@ -25,14 +25,14 @@ const Form = ({ children, text, darkmode }) => {
 };
 
 Form.propTypes = {
-  children: PropTypes.element,
-  text: String,
-  darkmode: true,
+  children: PropTypes.arrayOf(PropTypes.object),
+  text: PropTypes.string,
+  darkmode: PropTypes.bool,
 };
 
 Form.defaultProps = {
   children: PropTypes.element,
-  text: String,
+  text: 'Titel',
   darkmode: false,
 };
 
