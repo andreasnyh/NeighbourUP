@@ -8,7 +8,6 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   padding: 10px;
-  border: 1px solid black;
   background-color: ${(props) =>
     props.darkmode ? Colors.DarkBlue : Colors.Beige};
   border: 1px solid white;
