@@ -1,8 +1,8 @@
 process.env.NODE_ENV = 'test';
 
 const { expect } = require('chai');
-const { after, describe, before, it } = require('mocha');
 const request = require('supertest');
+const { after, describe, before, it } = require('mocha');
 
 // const app = require('../../../routes/user');
 const server = require('../../../server');
