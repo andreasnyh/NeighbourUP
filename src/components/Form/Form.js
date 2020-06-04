@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Colors from '../../variables';
 import Title from './Title';
+import Colors from '../../variables';
 
 const StyledForm = styled.form`
   display: flex;
@@ -11,6 +11,7 @@ const StyledForm = styled.form`
   border: 1px solid black;
   background-color: ${(props) =>
     props.darkmode ? Colors.DarkBlue : Colors.Beige};
+  border: 1px solid white;
 `;
 
 const Form = ({ children, text, darkmode }) => {
