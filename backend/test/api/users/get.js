@@ -4,9 +4,8 @@ const { expect } = require('chai');
 const request = require('supertest');
 const { after, describe, before, it } = require('mocha');
 
-// const app = require('../../../routes/user');
 const { connect, close } = require('../../../db/index');
-const app = require('../../../routes/user');
+const app = require('../../../routes/users');
 
 describe('GET /user', () => {
   before((done) => {

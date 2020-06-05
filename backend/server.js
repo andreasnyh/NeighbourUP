@@ -10,10 +10,10 @@ app.use(cors());
 app.use(express.json());
 
 // Router
-const userRouter = require('./routes/user');
+const userRouter = require('./routes/users');
 
 // Routes
-app.use('/user', userRouter);
+app.use('/users', userRouter);
 
 connect().then(
   app.listen(port, () => {

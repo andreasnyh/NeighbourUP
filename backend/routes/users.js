@@ -9,9 +9,10 @@ app.get('/', (req, res) => {
     .catch((err) => res.status(400).json(`Error: ${err}`));
 });
 
-app.get('/add', (req, res) => {
+app.post('/add', (req, res) => {
   const { firstName, lastName, email } = req.body;
   const newUser = new User({ firstName, lastName, email });
+  console.log(req.body);
 
   newUser
     .save()
