@@ -5,25 +5,24 @@ const request = require('supertest');
 const { after, describe, before, it } = require('mocha');
 
 // const app = require('../../../routes/user');
-const server = require('../../../server');
+const { connect, close } = require('../../../db/index');
+const app = require('../../../routes/user');
 
 describe('GET /user', () => {
   before((done) => {
-    server
-      .connect()
+    connect()
       .then(() => done())
       .catch((err) => done(err));
   });
 
   after((done) => {
-    server
-      .close()
+    close()
       .then(() => done())
       .catch((err) => done(err));
   });
   it('OK, getting users has no users', (done) => {
-    request(server.app)
-      .get('/user')
+    request(app)
+      .get('/')
       .then((res) => {
         console.log(res.body);
         expect(res.body.length).to.equal(0);
