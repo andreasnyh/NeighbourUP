@@ -1,7 +1,14 @@
 const express = require('express');
-const User = require('../models/user.model');
+const bodyParser = require('body-parser');
+const User = require('../db/models/user.model');
 
 const app = express();
+
+// create application/json parser
+const jsonParser = bodyParser.json();
+
+// create application/x-www-form-urlencoded parser
+// const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.get('/', (req, res) => {
   User.find()
@@ -9,13 +16,13 @@ app.get('/', (req, res) => {
     .catch((err) => res.status(400).json(`Error: ${err}`));
 });
 
-app.get('/add', (req, res) => {
+app.post('/add', jsonParser, (req, res) => {
   const { firstName, lastName, email } = req.body;
   const newUser = new User({ firstName, lastName, email });
 
   newUser
     .save()
-    .then(() => res.json('User added!'))
+    .then(() => res.json(newUser))
     .catch((err) => res.status(400).json(`Error: ${err}`));
 });
 

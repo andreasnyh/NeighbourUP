@@ -4,28 +4,26 @@ const { expect } = require('chai');
 const request = require('supertest');
 const { after, describe, before, it } = require('mocha');
 
-// const app = require('../../../routes/user');
-const server = require('../../../server');
+const { connect, close } = require('../../../db/index');
+const app = require('../../../routes/users');
 
-describe('GET /user', () => {
+describe('GET /users', () => {
   before((done) => {
-    server
-      .connect()
+    connect()
       .then(() => done())
       .catch((err) => done(err));
   });
 
   after((done) => {
-    server
-      .close()
+    close()
       .then(() => done())
       .catch((err) => done(err));
   });
-  it('OK, getting users has no users', (done) => {
-    request(server.app)
-      .get('/user')
+  it('No users in database', (done) => {
+    request(app)
+      .get('/')
       .then((res) => {
-        console.log(res.body);
+        console.log('res.body.length = ', res.body.length);
         expect(res.body.length).to.equal(0);
         done();
       })
