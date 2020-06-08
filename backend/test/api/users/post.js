@@ -21,12 +21,13 @@ describe('POST /user', () => {
   });
 
   it('Create new user', (done) => {
-    request(app).post('/add').send({
-      firstName: 'USER FIRST',
-      lastName: 'USER LAST',
-      email: 'USER@EMAIL.com',
-    });
-    expect(200)
+    request(app)
+      .post('/add')
+      .send({
+        firstName: 'USER FIRST',
+        lastName: 'USER LAST',
+        email: 'USER@EMAIL.com',
+      })
       .then((res) => {
         console.log('res', res.body);
         expect(res.body).to.contain.property('_id');
