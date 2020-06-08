@@ -7,7 +7,7 @@ const { after, describe, before, it } = require('mocha');
 const { connect, close } = require('../../../db/index');
 const app = require('../../../routes/users');
 
-describe('POST /user', () => {
+describe('POST /users', () => {
   before((done) => {
     connect()
       .then(() => done())
@@ -28,10 +28,14 @@ describe('POST /user', () => {
         lastName: 'USER LAST',
         email: 'USER@EMAIL.com',
       })
-      .then((res) => {
-        console.log('res', res.body);
-        expect(res.body).to.contain.property('_id');
-        done();
+      .then(() => {
+        request(app)
+          .get('/')
+          .then((res) => {
+            console.log('res.body.length = ', res.body.length);
+            expect(res.body.length).to.equal(1);
+            done();
+          });
       })
       .catch((err) => done(err));
   });
