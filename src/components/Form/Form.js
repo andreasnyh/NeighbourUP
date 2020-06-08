@@ -10,7 +10,6 @@ const StyledForm = styled.form`
   padding: 10px;
   background-color: ${(props) =>
     props.darkmode ? Colors.DarkBlue : Colors.Beige};
-  border: 1px solid white;
 `;
 
 const Form = ({ children, text, darkmode }) => {
