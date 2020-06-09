@@ -23,6 +23,14 @@
   "plugins": ["react", "prettier"],
   "rules": {
     "no-console": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ],
     "prettier/prettier": [
       "error",
       {

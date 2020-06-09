@@ -1,14 +1,13 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const User = require('../db/models/user.model');
 
 const app = express();
 
 // create application/json parser
-const jsonParser = bodyParser.json();
+const jsonParser = express.json();
 
 // create application/x-www-form-urlencoded parser
-// const urlencodedParser = bodyParser.urlencoded({ extended: false });
+// const urlencodedParser = express.urlencoded({ extended: false });
 
 app.get('/', (req, res) => {
   User.find()
