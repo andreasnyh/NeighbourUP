@@ -28,6 +28,10 @@ describe('POST /users', () => {
         lastName: 'USER LAST',
         email: 'USER@EMAIL.com',
       })
+      .expect(200)
+      .then((res) => {
+        console.log(`Post OK = ${res.ok}`);
+      })
       .then(() => {
         request(app)
           .get('/')
@@ -35,7 +39,8 @@ describe('POST /users', () => {
             console.log('res.body.length = ', res.body.length);
             expect(res.body.length).to.equal(1);
             done();
-          });
+          })
+          .catch((err) => done(err));
       })
       .catch((err) => done(err));
   });

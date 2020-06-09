@@ -22,7 +22,9 @@ describe('GET /users', () => {
   it('No users in database', (done) => {
     request(app)
       .get('/')
+      .expect(200)
       .then((res) => {
+        console.log(`Get OK = ${res.ok}`);
         console.log('res.body.length = ', res.body.length);
         expect(res.body.length).to.equal(0);
         done();
