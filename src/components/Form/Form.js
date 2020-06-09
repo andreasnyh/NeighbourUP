@@ -3,14 +3,17 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Title from './Title';
 import Colors from '../../variables';
+import Button from '../Button/Button';
 
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  margin-top: 120px;
+  padding: 15px;
   background-color: ${(props) =>
     props.darkmode ? Colors.DarkBlue : Colors.Beige};
-  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 `;
 
 const Form = ({ children, text, darkmode }) => {
@@ -19,6 +22,7 @@ const Form = ({ children, text, darkmode }) => {
       <StyledForm darkmode={darkmode}>
         <Title text={text} />
         {children}
+        <Button>Bli medlem!</Button>
       </StyledForm>
     </div>
   );
@@ -27,7 +31,7 @@ const Form = ({ children, text, darkmode }) => {
 Form.propTypes = {
   children: PropTypes.element,
   text: String,
-  darkmode: true,
+  darkmode: PropTypes.bool,
 };
 
 Form.defaultProps = {
