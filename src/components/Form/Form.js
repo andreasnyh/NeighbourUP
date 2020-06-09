@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Title from './components/Title';
 import Colors from '../../variables';
+import Button from '../Button/Button';
 
 const StyledForm = styled.form`
   display: flex;
@@ -20,6 +21,7 @@ const Form = ({ id, children, text, darkmode }) => {
       <StyledForm id={id} darkmode={darkmode}>
         <Title text={text} />
         {children}
+        <Button>Bli medlem!</Button>
       </StyledForm>
     </div>
   );
