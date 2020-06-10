@@ -17,25 +17,25 @@ app.get('/', (req, res) => {
 
 app.post('/add', jsonParser, (req, res) => {
   const {
-    firstName,
-    lastName,
-    postalNumber,
-    postalAdress,
-    password,
+    email,
     adress,
     coAdress,
-    email,
+    lastName,
+    password,
+    firstName,
+    postalNumber,
+    postalAdress,
   } = req.body;
 
   const newUser = new User({
-    firstName,
-    lastName,
     email,
-    postalNumber,
-    postalAdress,
-    password,
     adress,
     coAdress,
+    lastName,
+    password,
+    firstName,
+    postalNumber,
+    postalAdress,
   });
 
   newUser
