@@ -28,7 +28,7 @@ const Login = () => {
     <Form id="loginForm" text="Logga in">
       <Input type="email" placeholder="Email" name="email" />
       <Input type="password" placeholder="Lösenord" name="password" />
-      <Button onClick={handleLogin}>Ok</Button>
+      <Button onClick={handleLogin}>Logga in</Button>
     </Form>
   );
 };

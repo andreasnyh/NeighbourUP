@@ -7,8 +7,9 @@ import Colors from '../../variables';
 const StyledForm = styled.form`
   display: flex;
   align-items: center;
+  width: 500px;
   flex-direction: column;
-  padding: 10px;
+  padding: 10px 40px;
   background-color: ${(props) =>
     props.darkmode ? Colors.DarkBlue : Colors.Beige};
 `;
