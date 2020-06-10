@@ -6,6 +6,7 @@ import Colors from '../../variables';
 
 const StyledForm = styled.form`
   display: flex;
+  align-items: center;
   flex-direction: column;
   padding: 10px;
   background-color: ${(props) =>
