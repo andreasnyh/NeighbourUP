@@ -27,6 +27,11 @@ describe('POST /users', () => {
         firstName: 'USER FIRST',
         lastName: 'USER LAST',
         email: 'USER@EMAIL.com',
+        adress: 'USER ADRESS',
+        coAdress: '',
+        password: 'PASSWORD',
+        postalNumber: '12345',
+        postalAdress: 'USER TOWN',
       })
       .expect(200)
       .then((res) => {
