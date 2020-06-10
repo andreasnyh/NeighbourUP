@@ -3,58 +3,34 @@ import Form from '../../Form/Form';
 import Input from '../../Input/Input';
 import Button from '../../Button/Button';
 
+const handleLogin = (event) => {
+  event.preventDefault();
+  const formData = document.getElementById('loginForm');
+  const data = {
+    email: formData.email.value,
+    password: formData.password.value,
+  };
+
+  const url = 'http://localhost:5000/login';
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((result) => console.log(result));
+};
+
 const Login = () => {
   return (
-    <Form id="inputform" onsubmit="login()" text="Logga in">
+    <Form id="loginForm" text="Logga in">
       <Input type="email" placeholder="Email" name="email" />
       <Input type="password" placeholder="Lösenord" name="password" />
-      <Button>Ok</Button>
+      <Button onClick={handleLogin}>Ok</Button>
     </Form>
   );
 };
 
-const handleSubmit = () => {
-  const data = {
-    firstName: 'test',
-    lastName: 'från',
-    email: 'front',
-    adress: 'end',
-    coAdress: 'ndsa',
-    password: 'secret',
-    postalNumber: '12345',
-    PostalAdress: 'dsalndlas',
-  };
-
-  const url = 'localhost:3000/users/add';
-  fetch(url, {
-    method: 'POST',
-    body: JSON.stringify(data),
-    // -- or --
-    // body : JSON.stringify({
-    // user : document.getElementById('user').value,
-    // ...
-    // })
-  })
-    .then(
-      (response) => response.json() // .json(), etc.
-      // same as function(response) {return response.text();}
-    )
-    .then((result) => console.log(result));
-};
-
-handleSubmit();
 export default Login;
-
-/* 
-fetch('http://localhost:4000/api/users/register' , {
-  method: "POST",
-  headers: {
-    'Content-type': 'application/json'
-  },
-  body: JSON.stringify(this.state)
-})
-.then((result) => result.json())
-.then((resu) => { 
-  console.log(resu);
- })
- */

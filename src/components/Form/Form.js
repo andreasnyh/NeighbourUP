@@ -13,10 +13,10 @@ const StyledForm = styled.form`
     props.darkmode ? Colors.DarkBlue : Colors.Beige};
 `;
 
-const Form = ({ children, text, darkmode }) => {
+const Form = ({ id, children, text, darkmode }) => {
   return (
     <div>
-      <StyledForm darkmode={darkmode}>
+      <StyledForm id={id} darkmode={darkmode}>
         <Title text={text} />
         {children}
       </StyledForm>
@@ -27,12 +27,14 @@ const Form = ({ children, text, darkmode }) => {
 Form.propTypes = {
   children: PropTypes.arrayOf(PropTypes.object),
   text: PropTypes.string,
+  id: PropTypes.string,
   darkmode: PropTypes.bool,
 };
 
 Form.defaultProps = {
   children: PropTypes.element,
   text: 'Titel',
+  id: 'unnamedForm',
   darkmode: false,
 };
 
