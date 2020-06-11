@@ -19,7 +19,9 @@ app.post('/authLogin', (req, res) => {
     User.find({ email, password })
       .then((user) => {
         if (user.length === 0) {
-          res.status(404).send('Kontrollera email och/eller lösenord :)');
+          res.status(404).end('Kontrollera email och/eller lösenord :)');
+        } else {
+          res.send(user);
         }
       })
       .catch((err) => res.status(400).json(`Error: ${err}`));
