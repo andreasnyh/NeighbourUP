@@ -7,7 +7,9 @@ import Colors from '../../variables';
 const StyledForm = styled.form`
   display: flex;
   align-items: center;
-  width: 500px;
+  margin-top: 130px;
+  width: 200px;
+  border-radius: 9px;
   flex-direction: column;
   padding: 10px 40px;
   background-color: ${(props) =>

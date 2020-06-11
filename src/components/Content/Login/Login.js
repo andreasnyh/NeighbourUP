@@ -2,6 +2,8 @@ import React from 'react';
 import Form from 'components/Form/Form';
 import Input from 'components/Input/Input';
 import Button from 'components/Button/Button';
+import Header from 'components/Header/Header';
+import styled from 'styled-components';
 
 const handleLogin = (event) => {
   event.preventDefault();
@@ -23,13 +25,21 @@ const handleLogin = (event) => {
     .then((result) => console.log(result));
 };
 
+export const RegisterContainer = styled.div`
+  display: flex;
+  height: 120vh;
+  justify-content: center;
+`;
 const Login = () => {
   return (
-    <Form id="loginForm" text="Logga in">
-      <Input type="email" placeholder="Email" name="email" />
-      <Input type="password" placeholder="Lösenord" name="password" />
-      <Button onClick={handleLogin}>Logga in</Button>
-    </Form>
+    <RegisterContainer>
+      <Header />
+      <Form id="loginForm" text="Logga in">
+        <Input type="email" placeholder="Email" name="email" />
+        <Input type="password" placeholder="Lösenord" name="password" />
+        <Button onClick={handleLogin}>Logga in</Button>
+      </Form>
+    </RegisterContainer>
   );
 };
 
