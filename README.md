@@ -16,8 +16,6 @@ interactively in an isolated development environment.
 To run storybook, run `run storybook` in terminal and a new browser tab will open with storybook.
 Here you can see your individual components and tweak them as you like.
 
-### Jest
-
 ### ESLint
 
 The project got Eslint installed which will show linting errors in the editor and
@@ -46,6 +44,16 @@ This will run before the commit is being done, so when running `git commit` lint
 
 It looks something like this:
 ![alt tag](https://user-images.githubusercontent.com/53083229/83394453-e5bff180-a3f8-11ea-8b46-bc2149f999d2.png)
+
+## Testing
+
+### Jest
+
+### Mocha
+
+### Chai
+
+### Mongodb-memory-server
 
 ## Create React App
 
@@ -117,9 +125,3 @@ This section has moved here: <https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: <https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify>
-
-## Testing
-
-### Jest
-
-#### Mocha
