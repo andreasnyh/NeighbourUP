@@ -21,7 +21,7 @@ app.post('/authLogin', (req, res) => {
         if (user.length === 0) {
           res.status(404).end('Kontrollera email och/eller lösenord :)');
         } else {
-          res.send(user);
+          res.status(200).send('Inloggad');
         }
       })
       .catch((err) => res.status(400).json(`Error: ${err}`));

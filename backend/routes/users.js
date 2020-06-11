@@ -50,7 +50,10 @@ app.post('/add', (req, res) => {
   newUser
     .save()
     .then(() => res.json(newUser))
-    .catch((err) => res.status(400).json(`Error saving user: ${err}`));
+    .catch((err) => {
+      console.log(err.message);
+      res.status(400).json(`Error saving user`);
+    });
 });
 
 module.exports = app;
