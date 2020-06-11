@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from 'components/Form/Form';
 import Input from 'components/Input/Input';
+import Button from 'components/Button/Button';
 
 const handleLogin = (event) => {
   event.preventDefault();
