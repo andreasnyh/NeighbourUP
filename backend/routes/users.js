@@ -5,9 +5,11 @@ const app = express();
 
 // create application/json parser
 const jsonParser = express.json();
+app.use(jsonParser);
 
 // create application/x-www-form-urlencoded parser
-// const urlencodedParser = express.urlencoded({ extended: false });
+const urlencodedParser = express.urlencoded({ extended: false });
+app.use(urlencodedParser);
 
 app.get('/', (req, res) => {
   User.find()
@@ -15,7 +17,14 @@ app.get('/', (req, res) => {
     .catch((err) => res.status(400).json(`Error: ${err}`));
 });
 
-app.post('/add', jsonParser, (req, res) => {
+app.post('/findUser', (req, res) => {
+  console.log('find user ', req.body);
+  User.find({ email: req.body.email })
+    .then((user) => res.json(user))
+    .catch((err) => res.status(400).json(`Error: ${err}`));
+});
+
+app.post('/add', (req, res) => {
   const {
     email,
     adress,

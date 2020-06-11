@@ -11,9 +11,11 @@ app.use(express.json());
 
 // Router
 const userRouter = require('./routes/users');
+const loginRouter = require('./routes/login');
 
 // Routes
 app.use('/users', userRouter);
+app.use('/login', loginRouter);
 
 connect().then(
   app.listen(port, () => {
