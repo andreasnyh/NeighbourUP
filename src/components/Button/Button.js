@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Colors from '../../variables';
+import Colors from 'variables';
 
-const StyledButton = styled.button`
+const Button = styled.button`
   /* Adapt the colors based on primary prop */
   background: ${(props) => (props.lightMode ? Colors.DarkBlue : Colors.Pink)};
   color: ${(props) => (props.LightMode ? Colors.Black : Colors.White)};
@@ -17,4 +17,4 @@ const StyledButton = styled.button`
   }
 `;
 
-export default StyledButton;
+export default Button;

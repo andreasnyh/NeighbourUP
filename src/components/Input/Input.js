@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import Colors, { BoxShadow } from '../../variables';
+import Colors, { BoxShadow } from 'variables';
 
 const Input = styled.input`
+  width: 60%;
   background-color: ${(props) =>
     props.darkmode ? Colors.DarkBlue : Colors.Beige};
   color: ${(props) => (props.darkmode ? Colors.White : Colors.Black)};

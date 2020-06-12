@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Colors from '../../variables';
+import Colors from 'variables';
 import logo from './white-logo.png';
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
   background-color: ${Colors.DarkBlue};
   width: 100%;
   height: 150px;

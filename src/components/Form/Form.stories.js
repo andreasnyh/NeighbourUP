@@ -1,8 +1,7 @@
 import React from 'react';
-import Colors from '../../variables';
+import Colors from 'variables';
+import Input from 'components/Input/Input';
 import Form from './Form';
-import Input from '../Input/Input';
-import Header from '../Header/Header';
 
 export default { title: 'Forms' };
 
@@ -43,7 +42,6 @@ export const DarkModeForm = () => {
 export const LightModeForm = () => {
   return (
     <div>
-      <Header />
       <div style={StorybookWhiteCentered}>
         <Form text="Bli Medlem">
           <Input placeholder="Förnamn" />

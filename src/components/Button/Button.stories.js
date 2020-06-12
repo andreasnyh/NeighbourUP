@@ -1,6 +1,6 @@
 import React from 'react';
-import StyledButton from './Button';
-import Colors from '../../variables';
+import Colors from 'variables';
+import Button from './Button';
 
 export default { title: 'Buttons' };
 
@@ -25,7 +25,7 @@ const StorybookBlueCentered = {
 export const DarkModeButton = () => {
   return (
     <div style={StorybookBlueCentered}>
-      <StyledButton darkmode>Dark Mode</StyledButton>
+      <Button darkmode>Dark Mode</Button>
     </div>
   );
 };
@@ -33,7 +33,7 @@ export const DarkModeButton = () => {
 export const LightModeButton = () => {
   return (
     <div style={StorybookWhiteCentered}>
-      <StyledButton lightMode>Light Mode</StyledButton>
+      <Button lightMode>Light Mode</Button>
     </div>
   );
 };
