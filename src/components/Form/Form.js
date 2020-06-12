@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Colors from 'variables';
+import Button from 'components/Button/Button';
 import Title from './components/Title';
-import Colors from '../../variables';
-import Button from '../Button/Button';
 
 const StyledForm = styled.form`
   display: flex;
@@ -31,14 +31,9 @@ const Form = ({ id, children, text, darkmode }) => {
 };
 
 Form.propTypes = {
-<<<<<<< HEAD
   children: PropTypes.arrayOf(PropTypes.object),
   text: PropTypes.string,
   id: PropTypes.string,
-=======
-  children: PropTypes.element,
-  text: String,
->>>>>>> initial commit for register component
   darkmode: PropTypes.bool,
 };
 

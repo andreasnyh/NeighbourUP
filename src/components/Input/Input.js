@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Colors, { BoxShadow } from '../../variables';
+import Colors, { BoxShadow } from 'variables';
 
 const Input = styled.input`
   width: 60%;

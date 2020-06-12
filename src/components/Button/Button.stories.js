@@ -1,6 +1,6 @@
 import React from 'react';
+import Colors from 'variables';
 import Button from './Button';
-import Colors from '../../variables';
 
 export default { title: 'Buttons' };
 
