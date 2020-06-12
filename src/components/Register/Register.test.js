@@ -1,5 +1,4 @@
 import '@testing-library/jest-dom';
-import 'jest';
 
 // create a new test user
 const newUser = {
@@ -14,7 +13,7 @@ const newUser = {
 };
 
 // Send a post request with a parameter to localhost
-async function createUser(data) {
+export default async function createUser(data) {
   const response = await fetch('http://localhost:5000/users/add', {
     method: 'POST',
     headers: {

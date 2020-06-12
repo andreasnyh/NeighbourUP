@@ -2,31 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Colors from 'variables';
-import Button from 'components/Button/Button';
 import Title from './components/Title';
 
 const StyledForm = styled.form`
   display: flex;
   align-items: center;
-  width: 500px;
   flex-direction: column;
-  margin-top: 120px;
+  margin: 120px auto 40px auto;
   padding: 15px;
+  width: 80%;
   background-color: ${(props) =>
     props.darkmode ? Colors.DarkBlue : Colors.Beige};
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 `;
 
-const Form = ({ id, children, text, darkmode }) => {
+const Form = ({ handleSubmit, id, children, text, darkmode }) => {
   return (
-    <div>
-      <StyledForm id={id} darkmode={darkmode}>
-        <Title text={text} />
-        {children}
-        <Button>Bli medlem!</Button>
-      </StyledForm>
-    </div>
+    <StyledForm onSubmit={handleSubmit} id={id} darkmode={darkmode}>
+      <Title text={text} />
+      {children}
+    </StyledForm>
   );
 };
 
@@ -35,6 +31,7 @@ Form.propTypes = {
   text: PropTypes.string,
   id: PropTypes.string,
   darkmode: PropTypes.bool,
+  onSubmit: PropTypes.func,
 };
 
 Form.defaultProps = {

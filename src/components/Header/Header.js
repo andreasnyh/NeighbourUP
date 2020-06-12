@@ -14,7 +14,7 @@ const StyledHeader = styled.header`
   z-index: -1;
 `;
 
-const HeaderContainer = styled.div`
+const LogoContainer = styled.div`
   width: 210px;
   margin: 0 auto;
 `;
@@ -22,6 +22,7 @@ const HeaderContainer = styled.div`
 const StyledLogo = styled.img`
   width: 180px;
   margin: 10px;
+  margin-top: 30px;
 `;
 
 const StyledSlogan = styled.p`
@@ -33,12 +34,12 @@ const StyledSlogan = styled.p`
 const Header = () => {
   return (
     <StyledHeader>
-      <HeaderContainer>
+      <LogoContainer>
         <StyledLogo src={logo} alt="NeighbourUp logo" />
         <StyledSlogan>
           Bli medlem och ta kontakt med dina grannar redan idag!
         </StyledSlogan>
-      </HeaderContainer>
+      </LogoContainer>
     </StyledHeader>
   );
 };
