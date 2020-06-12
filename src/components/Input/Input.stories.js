@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Colors from '../../variables';
+import Colors from 'variables';
 import Input from './Input';
 
 export default { title: 'Input' };

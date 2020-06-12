@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../Header/Header';
-import Form from '../Form/Form';
-import Input from '../Input/Input';
+import Header from 'components/Header/Header';
+import Form from 'components/Form/Form';
+import Input from 'components/Input/Input';
 
 const RegisterContainer = {
   display: 'flex',
