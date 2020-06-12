@@ -1,5 +1,6 @@
 import React from 'react';
 import Register from './Register';
+import 'App.css';
 
 export default { title: 'Register Page' };
 
