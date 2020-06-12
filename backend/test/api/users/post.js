@@ -7,7 +7,18 @@ const { after, describe, before, it } = require('mocha');
 const { connect, close } = require('../../../db/index');
 const app = require('../../../routes/users');
 
-describe('POST /users', () => {
+const userTemplate = {
+  firstName: 'USER FIRST',
+  lastName: 'USER LAST',
+  email: 'USER@EMAIL.com',
+  adress: 'USER ADRESS',
+  coAdress: '',
+  password: 'PASSWORD',
+  postalNumber: 12345,
+  postalAdress: 'USER TOWN',
+};
+
+describe('POST /users/add', () => {
   before((done) => {
     connect()
       .then(() => done())
@@ -23,17 +34,8 @@ describe('POST /users', () => {
   it('Create new user', (done) => {
     request(app)
       .post('/add')
-      .send({
-        firstName: 'USER FIRST',
-        lastName: 'USER LAST',
-        email: 'USER@EMAIL.com',
-        adress: 'USER ADRESS',
-        coAdress: '',
-        password: 'PASSWORD',
-        postalNumber: '12345',
-        postalAdress: 'USER TOWN',
-      })
-      .expect(200)
+      .send(userTemplate)
+      .expect(201)
       .then((res) => {
         console.log(`Post OK = ${res.ok}`);
       })

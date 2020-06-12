@@ -1,5 +1,6 @@
 const express = require('express');
 const User = require('../db/models/user.model');
+const validate = require('../validate');
 
 const app = express();
 
@@ -47,13 +48,18 @@ app.post('/add', (req, res) => {
     postalAdress,
   });
 
-  newUser
-    .save()
-    .then(() => res.json(newUser))
-    .catch((err) => {
-      console.log(err.message);
-      res.status(400).json(`Error saving user`);
-    });
+  console.log('validate user: ', validate(newUser));
+
+  // if validation is OK save user to db
+  validate(newUser)
+    ? newUser
+        .save()
+        .then(() => res.status(201).json(newUser))
+        .catch((err) => {
+          console.log(err.message);
+          res.status(400).json(`Error saving user`);
+        })
+    : res.status(400).json('Validation Error');
 });
 
 module.exports = app;
