@@ -2,7 +2,15 @@ import styled from 'styled-components';
 import Colors, { BoxShadow } from 'variables';
 
 const Input = styled.input`
-  width: 60%;
+  width: ${(props) => {
+    if (props.small) {
+      return '30%';
+    }
+    if (props.medium) {
+      return '65%';
+    }
+    return '60%';
+  }}};
   background-color: ${(props) =>
     props.darkmode ? Colors.DarkBlue : Colors.Beige};
   color: ${(props) => (props.darkmode ? Colors.White : Colors.Black)};
