@@ -1,4 +1,5 @@
 const express = require('express');
+const { check } = require('express-validator');
 
 const app = express();
 const authController = require('../controllers/auth.controller');
@@ -11,7 +12,18 @@ app.use(jsonParser);
 const urlencodedParser = express.urlencoded({ extended: false });
 app.use(urlencodedParser);
 
-app.post('/login', authController.login);
+// check('what in req', 'message if error').typeOfCheck()
+app.post(
+  '/login',
+  [
+    check('email', 'Email is required bro!').isEmail(),
+    check(
+      'password',
+      'Please enter a password with 6 or more characters!'
+    ).isLength({ min: 6 }),
+  ],
+  authController.login
+);
 
 app.post('/signup', authController.signup);
 

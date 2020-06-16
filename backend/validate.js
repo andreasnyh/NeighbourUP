@@ -1,4 +1,4 @@
-const validator = require('validator');
+/* const validator = require('validator');
 
 function validateRegistration(user) {
   // is it a vaild email adress
@@ -17,3 +17,4 @@ function validateRegistration(user) {
 }
 
 module.exports = validateRegistration;
+ */
