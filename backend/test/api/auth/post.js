@@ -1,11 +1,12 @@
-/* process.env.NODE_ENV = 'test';
+process.env.NODE_ENV = 'test';
 
 const { expect } = require('chai');
 const request = require('supertest');
 const { after, describe, before, it } = require('mocha');
 
 const { connect, close } = require('../../../index');
-const app = require('../../../routes/users.routes');
+const app = require('../../../routes/auth.routes');
+const users = require('../../../routes/users.routes');
 
 const userTemplate = {
   firstName: 'USER FIRST',
@@ -18,7 +19,7 @@ const userTemplate = {
   postalAdress: 'USER TOWN',
 };
 
-describe('POST /users', () => {
+describe('POST /auth/signup', () => {
   before((done) => {
     connect()
       .then(() => done())
@@ -33,14 +34,14 @@ describe('POST /users', () => {
 
   it('Create new user', (done) => {
     request(app)
-      .post('/add')
+      .post('/signup')
       .send(userTemplate)
-      .expect(201)
+      .expect(201) // Created
       .then((res) => {
-        console.log(`Post OK = ${res.ok}`);
+        console.log(`User registered = ${res.status}`);
       })
       .then(() => {
-        request(app)
+        request(users)
           .get('/')
           .then((res) => {
             console.log('res.body.length = ', res.body.length);
@@ -52,4 +53,3 @@ describe('POST /users', () => {
       .catch((err) => done(err));
   });
 });
- */
