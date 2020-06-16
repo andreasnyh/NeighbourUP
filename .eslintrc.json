@@ -1,13 +1,15 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest/globals": true
   },
   "extends": [
     "plugin:react/recommended",
     "airbnb",
     "prettier",
-    "prettier/react"
+    "prettier/react",
+    "plugin:jest/recommended"
   ],
   "globals": {
     "Atomics": "readonly",
