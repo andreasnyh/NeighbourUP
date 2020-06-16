@@ -10,6 +10,8 @@ const StorybookWhiteCentered = {
   padding: '100px',
   justifyContent: 'center',
   height: '130vh',
+  width: '50%',
+  margin: '0 auto',
 };
 
 const StorybookBlueCentered = {
@@ -19,6 +21,8 @@ const StorybookBlueCentered = {
   width: '100vw',
   height: '130vh',
   background: Colors.DarkBlue,
+  width: '50%',
+  margin: '0 auto',
 };
 
 export const DarkModeForm = () => {

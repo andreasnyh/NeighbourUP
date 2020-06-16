@@ -10,7 +10,8 @@ const StorybookWhiteCentered = {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  width: '100%',
+  margin: '0px auto',
+  width: '50%',
   height: '100%',
 };
 // End styling for storybook

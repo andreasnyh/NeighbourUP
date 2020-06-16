@@ -11,7 +11,7 @@ const StorybookWhiteCentered = {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  width: '100%',
+  width: '50%',
   height: '100%',
 };
 
@@ -21,6 +21,8 @@ const normalmode = {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
+  width: '50%',
+  margin: ' 0 auto',
 };
 
 const darkmode = {
@@ -30,6 +32,8 @@ const darkmode = {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
+  width: '50%',
+  margin: ' 0 auto',
 };
 
 const margin = {
