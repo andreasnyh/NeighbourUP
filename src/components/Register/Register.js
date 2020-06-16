@@ -5,11 +5,6 @@ import Input from 'components/Input/Input';
 import Button from 'components/Button/Button';
 import styled from 'styled-components';
 
-const RegisterContainer = {
-  display: 'flex',
-  justifyContent: 'center',
-};
-
 const SplitContainer = styled.div`
   width: 80%;
   display: flex;
@@ -27,7 +22,7 @@ class Register extends React.Component {
   }
 
   async createUser(data) {
-    const response = await fetch('http://localhost:5000/users/add', {
+    const response = await fetch('http://localhost:5000/auth/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

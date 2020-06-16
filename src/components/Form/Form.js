@@ -10,7 +10,7 @@ const StyledForm = styled.form`
   flex-direction: column;
   margin: 120px auto 40px auto;
   padding: 15px;
-  width: 80%;
+  width: 70%;
   background-color: ${(props) =>
     props.darkmode ? Colors.DarkBlue : Colors.Beige};
   border-radius: 10px;
