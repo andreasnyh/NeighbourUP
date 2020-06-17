@@ -1,7 +1,7 @@
 const { check } = require('express-validator');
 
 const loginValidationOptions = [
-  check('email', 'Email is required bro!').isEmail(),
+  check('email', 'A valid email is required!').isEmail(),
   check(
     'password',
     'Please enter a password with 6 or more characters!'
@@ -17,14 +17,14 @@ const registerValidationOptions = [
     .withMessage('Email is not valid'),
 
   check('firstName').trim().escape().isLength({ min: 2 }),
-  check('lastName').trim().escape(),
-  check('Adress').trim().escape(),
+  check('lastName').trim().escape().isLength({ min: 2 }),
+  check('Adress').trim().escape().isLength({ min: 2 }),
   check('coAdress').trim().escape(),
   check('postalNumber')
     .trim()
     .isNumeric([{ no_symbols: true }])
     .isLength({ min: 5, max: 5 }),
-  check('postalAdress').trim().escape(),
+  check('postalAdress').trim().escape().isLength({ min: 2 }),
 ];
 
 module.exports = { registerValidationOptions, loginValidationOptions };
