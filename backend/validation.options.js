@@ -18,7 +18,7 @@ const registerValidationOptions = [
 
   check('firstName').trim().escape().isLength({ min: 2 }),
   check('lastName').trim().escape().isLength({ min: 2 }),
-  check('Adress').trim().escape().isLength({ min: 2 }),
+  check('adress').trim().escape().isLength({ min: 2 }),
   check('coAdress').trim().escape(),
   check('postalNumber')
     .trim()
