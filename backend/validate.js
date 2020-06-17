@@ -1,19 +1,16 @@
-const validator = require('validator');
+const { validationResult } = require('express-validator');
 
-function validateRegistration(user) {
-  // is it a vaild email adress
-  if (validator.isEmail(user.email) === false) {
-    return false;
-  }
+const validate = (validations) => {
+  return async (req, res, next) => {
+    await Promise.all(validations.map((validation) => validation.run(req)));
 
-  // is the postalNumber 5 chars long
-  if (
-    validator.isLength(user.postalNumber.toString(), { min: 5, max: 5 }) ===
-    false
-  ) {
-    return false;
-  }
-  return true;
-}
+    const errors = validationResult(req);
+    if (errors.isEmpty()) {
+      return next();
+    }
 
-module.exports = validateRegistration;
+    return res.status(422).json({ errors: errors.array() });
+  };
+};
+
+module.exports = { validate };

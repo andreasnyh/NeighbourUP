@@ -1,5 +1,11 @@
 const express = require('express');
 
+const { validate } = require('../validate');
+const {
+  loginValidationOptions,
+  registerValidationOptions,
+} = require('../validation.options');
+
 const app = express();
 const authController = require('../controllers/auth.controller');
 
@@ -11,8 +17,9 @@ app.use(jsonParser);
 const urlencodedParser = express.urlencoded({ extended: false });
 app.use(urlencodedParser);
 
-app.post('/login', authController.login);
+// check('what in req', 'message if error').typeOfCheck()
+app.post('/login', validate(loginValidationOptions), authController.login);
 
-app.post('/signup', authController.signup);
+app.post('/signup', validate(registerValidationOptions), authController.signup);
 
 module.exports = app;

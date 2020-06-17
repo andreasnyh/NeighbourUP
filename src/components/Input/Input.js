@@ -9,6 +9,7 @@ const Input = styled.input`
     if (props.medium) {
       return '65%';
     }
+
     return '80%';
   }}};
   background-color: ${(props) =>
