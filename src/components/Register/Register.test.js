@@ -13,8 +13,8 @@ const newUser = {
 };
 
 // Send a post request with a parameter to localhost
-export default async function createUser(data) {
-  const response = await fetch('http://localhost:5000/users/add', {
+async function createUser(data) {
+  const response = await fetch('http://localhost:5000/auth/signup', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
