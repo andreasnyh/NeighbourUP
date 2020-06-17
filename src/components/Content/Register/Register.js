@@ -38,8 +38,8 @@ class Register extends React.Component {
   }
 
   handleInputChange(event) {
-    const target = event.target;
-    const name = target.name;
+    const { target } = event;
+    const { name } = target;
     const value = target.name === 'terms' ? target.checked : target.value;
 
     this.setState({
