@@ -48,6 +48,10 @@ const userSchema = mongoose.Schema({
     minlength: 5,
     maxlength: 5,
   },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
 const User = mongoose.model('User', userSchema, 'users');
