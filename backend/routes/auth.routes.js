@@ -1,6 +1,10 @@
 const express = require('express');
 
-const { check } = require('express-validator');
+const { validate } = require('../validate');
+const {
+  loginValidationOptions,
+  registerValidationOptions,
+} = require('../validation.options');
 
 const app = express();
 const authController = require('../controllers/auth.controller');
@@ -14,18 +18,8 @@ const urlencodedParser = express.urlencoded({ extended: false });
 app.use(urlencodedParser);
 
 // check('what in req', 'message if error').typeOfCheck()
-app.post(
-  '/login',
-  [
-    check('email', 'Email is required bro!').isEmail(),
-    check(
-      'password',
-      'Please enter a password with 6 or more characters!'
-    ).isLength({ min: 6 }),
-  ],
-  authController.login
-);
+app.post('/login', validate(loginValidationOptions), authController.login);
 
-app.post('/signup', authController.signup);
+app.post('/signup', validate(registerValidationOptions), authController.signup);
 
 module.exports = app;
