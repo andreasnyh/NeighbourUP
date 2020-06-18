@@ -3,49 +3,49 @@ import Color, { BoxShadow } from 'variables';
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 
+const MenuItemContainer = styled.div`
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: ${(props) => props.bgColor};
+  padding: 20px;
+  box-shadow: ${BoxShadow.Normal};
+  border-radius: 7px;
+  height: 125px;
+  width: 130px;
+`;
+const MenuItemText = styled.div`
+  display: flex;
+  align-items: center;
+  background-color: ${(props) => props.bgColorText};
+  color: ${Color.White};
+  font-size: 16px;
+  padding: 0 0;
+  position: absolute;
+  top: -35px;
+  border-radius: 7px;
+  text-align: center;
+  min-height: 50px;
+  width: 110px;
+  justify-content: center;
+`;
+
+const IconBackground = styled.div`
+  display: flex;
+  border-radius: 50%;
+  background-color: ${(props) => props.bgColorIcon};
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+`;
+
 const MainMenuItem = ({ bgColor, bgColorIcon, bgColorText, text, icon }) => {
-  const MenuItemContainer = styled.div`
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background-color: ${bgColor};
-    padding: 20px;
-    box-shadow: ${BoxShadow.Normal};
-    border-radius: 7px;
-    height: 125px;
-    width: 130px;
-  `;
-
-  const MenuItemText = styled.div`
-    display: flex;
-    align-items: center;
-    background-color: ${bgColorText};
-    color: ${Color.White};
-    font-size: 16px;
-    padding: 0 0;
-    position: absolute;
-    top: -35px;
-    border-radius: 7px;
-    text-align: center;
-    min-height: 50px;
-    width: 110px;
-    justify-content: center;
-  `;
-
-  const IconBackground = styled.div`
-    display: flex;
-    border-radius: 50%;
-    background-color: ${bgColorIcon};
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-  `;
   return (
-    <MenuItemContainer>
+    <MenuItemContainer bgColor={bgColor}>
       <MenuItemText bgColorText={bgColorText}>{text}</MenuItemText>
-      <IconBackground>{icon}</IconBackground>
+      <IconBackground bgColorIcon={bgColorIcon}>{icon}</IconBackground>
     </MenuItemContainer>
   );
 };
@@ -60,9 +60,9 @@ MainMenuItem.propTypes = {
 
 MainMenuItem.defaultProps = {
   bgColor: Color.Beige,
-  bgColorIcon: Color.White,
-  bgColorText: Color.White,
-  text: 'text',
-  icon: 'länk till ikon',
+  bgColorIcon: Color.DarkBlue,
+  bgColorText: Color.Green,
+  text: 'Title',
+  icon: <></>,
 };
 export default MainMenuItem;

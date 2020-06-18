@@ -1,30 +1,13 @@
 import React from 'react';
 import Input from 'components/Input/Input';
+import StoryBook from 'storybook.style';
 import Form from './Form';
 
 export default { title: 'Forms' };
 
-const StorybookWhiteCentered = {
-  display: 'flex',
-  padding: '75px',
-  justifyContent: 'center',
-  height: '130vh',
-  width: '50%',
-  margin: '0 auto',
-};
-
-const StorybookBlueCentered = {
-  display: 'flex',
-  padding: '75px',
-  justifyContent: 'center',
-  height: '130vh',
-  width: '50%',
-  margin: '0 auto',
-};
-
 export const DarkModeForm = () => {
   return (
-    <div style={StorybookBlueCentered}>
+    <StoryBook darkmode>
       <Form darkmode text="Bli Medlem">
         <Input darkmode placeholder="Förnamn" />
         <Input darkmode placeholder="Efternamn" />
@@ -36,13 +19,13 @@ export const DarkModeForm = () => {
         <Input darkmode placeholder="Lösenord" />
         <Input darkmode placeholder="Upprepa lösenord" />
       </Form>
-    </div>
+    </StoryBook>
   );
 };
 
 export const LightModeForm = () => {
   return (
-    <div style={StorybookWhiteCentered}>
+    <StoryBook>
       <Form text="Bli Medlem">
         <Input placeholder="Förnamn" />
         <Input placeholder="Efternamn" />
@@ -54,6 +37,6 @@ export const LightModeForm = () => {
         <Input placeholder="Lösenord" />
         <Input placeholder="Upprepa lösenord" />
       </Form>
-    </div>
+    </StoryBook>
   );
 };
