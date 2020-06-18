@@ -1,17 +1,15 @@
 import React from 'react';
+import Colors from 'variables';
 import MainMenu from './MainMenu';
 
 export default { title: 'MainMenu' };
 
 const StorybookWhiteCentered = {
-  //   display: 'flex',
-  //   flexWrap: 'wrap',
-  //   justifyContent: 'center',
   width: '375px',
-  padding: '50px 25px',
-  height: '130vh',
+  height: '100vh',
   margin: '0 auto',
-  border: '1px solid black',
+  padding: '50px 25px',
+  backgroundColor: Colors.Beige,
 };
 
 export const MainMenuStory = () => {

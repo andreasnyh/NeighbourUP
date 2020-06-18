@@ -22,6 +22,7 @@ const StyledMainMenu = styled.div`
   row-gap: 50px;
   justify-items: center;
   font-size: 24px;
+  font-weight: 500;
 `;
 
 // ⬆ font-size controlls icon size ⬇

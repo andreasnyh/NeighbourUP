@@ -18,14 +18,19 @@ const MainMenuItem = ({ bgColor, bgColorIcon, bgColorText, text, icon }) => {
   `;
 
   const MenuItemText = styled.div`
+    display: flex;
+    align-items: center;
     background-color: ${bgColorText};
     color: ${Color.White};
     font-size: 16px;
-    padding: 10px;
+    padding: 0 0;
     position: absolute;
-    top: -25px;
+    top: -35px;
     border-radius: 7px;
     text-align: center;
+    min-height: 50px;
+    width: 110px;
+    justify-content: center;
   `;
 
   const IconBackground = styled.div`
