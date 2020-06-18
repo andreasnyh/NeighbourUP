@@ -1,6 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import Colors from 'variables';
+// logos
+import {
+  Build,
+  Settings,
+  Person,
+  Chat,
+  People,
+  DateRange,
+} from '@material-ui/icons/';
+
 import MainMenuItem from './components/MainMenuItem';
 // import PropTypes from 'prop-types';
 
@@ -17,46 +27,46 @@ const MainMenu = () => {
   return (
     <StyledMainMenu>
       <MainMenuItem
-        text="Titel"
-        icon="icon"
+        text="Prylar & Tjänster"
+        icon={<Build style={{ fill: Colors.White, fontSize: '2rem' }} />}
+        bgColor={Colors.Beige}
+        bgColorText={Colors.Green}
+        bgColorIcon={Colors.DarkBlue}
+      />
+      <MainMenuItem
+        text="Meddelanden"
+        icon={<Chat style={{ fill: Colors.White, fontSize: '2rem' }} />}
+        bgColor={Colors.Beige}
+        bgColorText={Colors.Green}
+        bgColorIcon={Colors.Yellow}
+      />
+      <MainMenuItem
+        text="Kalender"
+        icon={<DateRange style={{ fill: Colors.White, fontSize: '2rem' }} />}
         bgColor={Colors.Beige}
         bgColorText={Colors.Green}
         bgColorIcon={Colors.Pink}
       />
       <MainMenuItem
-        text="Titel"
-        icon="icon"
+        text="Mina Grannar"
+        icon={<People style={{ fill: Colors.White, fontSize: '2.25rem' }} />}
         bgColor={Colors.Beige}
         bgColorText={Colors.Green}
-        bgColorIcon={Colors.Pink}
+        bgColorIcon={Colors.LightBlue}
       />
       <MainMenuItem
-        text="Titel"
-        icon="icon"
+        text="Min Profil"
+        icon={<Person style={{ fill: Colors.White, fontSize: '2.5rem' }} />}
         bgColor={Colors.Beige}
         bgColorText={Colors.Green}
-        bgColorIcon={Colors.Pink}
+        bgColorIcon={Colors.Yellow}
       />
       <MainMenuItem
-        text="Titel"
-        icon="icon"
+        text="Inställningar"
+        icon={<Settings style={{ fill: Colors.White, fontSize: '2.5rem' }} />}
         bgColor={Colors.Beige}
         bgColorText={Colors.Green}
-        bgColorIcon={Colors.Pink}
-      />
-      <MainMenuItem
-        text="Titel"
-        icon="icon"
-        bgColor={Colors.Beige}
-        bgColorText={Colors.Green}
-        bgColorIcon={Colors.Pink}
-      />
-      <MainMenuItem
-        text="Titel"
-        icon="icon"
-        bgColor={Colors.Beige}
-        bgColorText={Colors.Green}
-        bgColorIcon={Colors.Pink}
+        bgColorIcon={Colors.DarkBlue}
       />
     </StyledMainMenu>
   );

@@ -39,7 +39,7 @@ const MainMenuItem = ({ bgColor, bgColorIcon, bgColorText, text, icon }) => {
   return (
     <MenuItemContainer>
       <MenuItemText bgColorText={bgColorText}>{text}</MenuItemText>
-      <IconBackground icon={icon} />
+      <IconBackground>{icon}</IconBackground>
     </MenuItemContainer>
   );
 };
