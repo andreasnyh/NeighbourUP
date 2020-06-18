@@ -13,18 +13,19 @@ const MainMenuItem = ({ bgColor, bgColorIcon, bgColorText, text, icon }) => {
     padding: 20px;
     box-shadow: ${BoxShadow.Normal};
     border-radius: 7px;
-    height: 100px;
-    width: 100px;
+    height: 125px;
+    width: 130px;
   `;
 
   const MenuItemText = styled.div`
     background-color: ${bgColorText};
-    font-size: 15px;
-    font-family: Roboto;
+    color: ${Color.White};
+    font-size: 16px;
     padding: 10px;
     position: absolute;
     top: -25px;
     border-radius: 7px;
+    text-align: center;
   `;
 
   const IconBackground = styled.div`
@@ -33,8 +34,8 @@ const MainMenuItem = ({ bgColor, bgColorIcon, bgColorText, text, icon }) => {
     background-color: ${bgColorIcon};
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
   `;
   return (
     <MenuItemContainer>

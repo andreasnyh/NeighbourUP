@@ -21,49 +21,52 @@ const StyledMainMenu = styled.div`
   column-gap: 10px;
   row-gap: 50px;
   justify-items: center;
+  font-size: 24px;
 `;
+
+// ⬆ font-size controlls icon size ⬇
 
 const MainMenu = () => {
   return (
     <StyledMainMenu>
       <MainMenuItem
-        text="Prylar & Tjänster"
-        icon={<Build style={{ fill: Colors.White, fontSize: '2rem' }} />}
+        text="Prylar &amp; Tjänster"
+        icon={<Build style={{ fill: Colors.White, fontSize: '2em' }} />}
         bgColor={Colors.Beige}
         bgColorText={Colors.Green}
         bgColorIcon={Colors.DarkBlue}
       />
       <MainMenuItem
         text="Meddelanden"
-        icon={<Chat style={{ fill: Colors.White, fontSize: '2rem' }} />}
+        icon={<Chat style={{ fill: Colors.White, fontSize: '2em' }} />}
         bgColor={Colors.Beige}
         bgColorText={Colors.Green}
         bgColorIcon={Colors.Yellow}
       />
       <MainMenuItem
         text="Kalender"
-        icon={<DateRange style={{ fill: Colors.White, fontSize: '2rem' }} />}
+        icon={<DateRange style={{ fill: Colors.White, fontSize: '2.25em' }} />}
         bgColor={Colors.Beige}
         bgColorText={Colors.Green}
         bgColorIcon={Colors.Pink}
       />
       <MainMenuItem
         text="Mina Grannar"
-        icon={<People style={{ fill: Colors.White, fontSize: '2.25rem' }} />}
+        icon={<People style={{ fill: Colors.White, fontSize: '2.5em' }} />}
         bgColor={Colors.Beige}
         bgColorText={Colors.Green}
         bgColorIcon={Colors.LightBlue}
       />
       <MainMenuItem
         text="Min Profil"
-        icon={<Person style={{ fill: Colors.White, fontSize: '2.5rem' }} />}
+        icon={<Person style={{ fill: Colors.White, fontSize: '2.5em' }} />}
         bgColor={Colors.Beige}
         bgColorText={Colors.Green}
         bgColorIcon={Colors.Yellow}
       />
       <MainMenuItem
         text="Inställningar"
-        icon={<Settings style={{ fill: Colors.White, fontSize: '2.5rem' }} />}
+        icon={<Settings style={{ fill: Colors.White, fontSize: '2.5em' }} />}
         bgColor={Colors.Beige}
         bgColorText={Colors.Green}
         bgColorIcon={Colors.DarkBlue}
