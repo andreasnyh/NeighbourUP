@@ -11,8 +11,6 @@ router.use(jsonParser);
 const urlencodedParser = express.urlencoded({ extended: false });
 router.use(urlencodedParser);
 
-/*  TEST */
-
 router.get('/', userController.index);
 
 router.post('/find/:email', userController.detail);

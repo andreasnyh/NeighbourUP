@@ -1,13 +1,7 @@
-const { validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
 const User = require('../models/user.model');
 
 const login = (req, res) => {
-  // if the check in the route fails return one or more errors
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(422).json({ errors: errors.array() });
-  }
-
   const { email, password } = req.body;
 
   return User.find({ email, password })
@@ -20,7 +14,7 @@ const login = (req, res) => {
     .catch((err) => res.status(400).json(`Error: ${err}`));
 };
 
-const signup = (req, res) => {
+const signup = async (req, res) => {
   const {
     email,
     adress,
@@ -32,6 +26,16 @@ const signup = (req, res) => {
     postalAdress,
   } = req.body;
 
+  // Check if user already exists
+  const userExists = await User.findOne({ email });
+
+  if (userExists) {
+    return res
+      .status(400)
+      .json({ errors: [{ msg: 'Denna email är redan registrerad!' }] });
+  }
+
+  // Create a user object
   const newUser = new User({
     email,
     adress,
@@ -43,12 +47,18 @@ const signup = (req, res) => {
     postalAdress,
   });
 
-  newUser
+  // Password encryption
+  const salt = await bcrypt.genSalt(10);
+
+  newUser.password = await bcrypt.hash(password, salt);
+
+  // Save user to DB
+  return newUser
     .save()
     .then(() => res.status(201).json(newUser))
     .catch((err) => {
       console.log(err.message);
-      res.status(400).json(`Error saving user`);
+      res.status(400).json(`Error saving user!`);
     });
 };
 

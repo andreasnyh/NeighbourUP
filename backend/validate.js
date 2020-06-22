@@ -8,7 +8,6 @@ const validate = (validations) => {
     if (errors.isEmpty()) {
       return next();
     }
-
     return res.status(422).json({ errors: errors.array() });
   };
 };
