@@ -1,11 +1,8 @@
 const { check } = require('express-validator');
 
 const loginValidationOptions = [
-  check('email', 'A valid email is required!').isEmail(),
-  check(
-    'password',
-    'Please enter a password with 6 or more characters!'
-  ).isLength({ min: 6 }),
+  check('email', 'Kontrollera epostadress!').isEmail(),
+  check('password', 'Ange ett lösenord!').not().isEmpty(),
 ];
 
 const registerValidationOptions = [
