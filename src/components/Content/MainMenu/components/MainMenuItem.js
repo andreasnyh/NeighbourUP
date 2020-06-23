@@ -14,6 +14,7 @@ const MenuItemContainer = styled.div`
   border-radius: 7px;
   height: 125px;
   width: 130px;
+  margin: 0 auto;
 `;
 const MenuItemText = styled.div`
   display: flex;

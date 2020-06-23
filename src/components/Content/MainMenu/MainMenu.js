@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Colors from 'variables';
-// logos
 import {
   Build,
   Settings,
@@ -10,12 +9,13 @@ import {
   People,
   DateRange,
 } from '@material-ui/icons/';
+// logos
 
 import MainMenuItem from './components/MainMenuItem';
 // import PropTypes from 'prop-types';
 
 const StyledMainMenu = styled.div`
-  margin: 0 auto;
+  margin: 5rem auto 3rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 10px;

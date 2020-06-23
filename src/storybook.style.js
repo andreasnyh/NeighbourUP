@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Storybook = styled.div`
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 50px 0;
+  padding-bottom: 3rem;
   width: 100%;
   background-color: ${(props) =>
     props.darkmode ? Colors.DarkBlue : Colors.Beige};

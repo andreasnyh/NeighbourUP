@@ -8,9 +8,6 @@ const StyledHeader = styled.header`
   width: 100%;
   height: 150px;
   text-align: center;
-  position: absolute;
-  left: 0px;
-  top: 0px;
   border-radius: 0 0 10px 10px;
 `;
 
