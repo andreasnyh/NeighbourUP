@@ -8,18 +8,19 @@ const StyledForm = styled.form`
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 120px auto 40px auto;
+  margin: -25px auto 40px auto;
   padding: 15px;
-  width: 70%;
+  width: 90%;
+  z-index: 0;
   background-color: ${(props) =>
     props.darkmode ? Colors.DarkBlue : Colors.Beige};
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 `;
 
-const Form = ({ handleSubmit, id, children, text, darkmode }) => {
+const Form = ({ children, text, darkmode }) => {
   return (
-    <StyledForm onSubmit={handleSubmit} id={id} darkmode={darkmode}>
+    <StyledForm darkmode={darkmode}>
       <Title text={text} />
       {children}
     </StyledForm>
@@ -29,15 +30,12 @@ const Form = ({ handleSubmit, id, children, text, darkmode }) => {
 Form.propTypes = {
   children: PropTypes.arrayOf(PropTypes.object),
   text: PropTypes.string,
-  id: PropTypes.string,
   darkmode: PropTypes.bool,
-  onSubmit: PropTypes.func,
 };
 
 Form.defaultProps = {
   children: PropTypes.element,
   text: 'Titel',
-  id: 'unnamedForm',
   darkmode: false,
 };
 

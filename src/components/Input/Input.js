@@ -17,6 +17,7 @@ const Input = styled.input`
   color: ${(props) => (props.darkmode ? Colors.White : Colors.Black)};
   border-radius: 17px;
   border: 0;
+  font-weight: normal;
   margin: 10px 0;
   padding: 14px;
   box-shadow: ${(props) =>
