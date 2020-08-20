@@ -8,9 +8,9 @@ const StyledForm = styled.form`
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 75px auto 40px auto;
+  margin: -25px auto 40px auto;
   padding: 15px;
-  width: 70%;
+  width: 90%;
   z-index: 0;
   background-color: ${(props) =>
     props.darkmode ? Colors.DarkBlue : Colors.Beige};

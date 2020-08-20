@@ -8,8 +8,8 @@ const StyledHeader = styled.header`
   width: 100%;
   height: 150px;
   text-align: center;
-  border-radius: 0 0 10px 10px;
 `;
+// border-radius: 0 0 10px 10px;
 
 const LogoContainer = styled.div`
   width: 210px;
