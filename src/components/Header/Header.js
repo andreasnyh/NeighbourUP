@@ -8,11 +8,8 @@ const StyledHeader = styled.header`
   width: 100%;
   height: 150px;
   text-align: center;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
 `;
+// border-radius: 0 0 10px 10px;
 
 const LogoContainer = styled.div`
   width: 210px;
@@ -29,6 +26,7 @@ const StyledSlogan = styled.p`
   font-family: Roboto, sans-serif;
   color: ${Colors.White};
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  margin: 0;
 `;
 
 const Header = () => {

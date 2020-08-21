@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
     "@storybook/react": "^5.3.19",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "dotenv": "^8.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -18,9 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook",
-    "lint": "eslint ./src",
-    "lintb": "eslint ./backend"
+    "storybook": "start-storybook -p 9009 -s public",
+    "lint": "eslint ./src"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,6 +41,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.1",
+    "@storybook/addon-viewport": "^5.3.19",
     "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
     "eslint": "^6.8.0",
